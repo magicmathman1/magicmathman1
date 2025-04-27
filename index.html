@@ -1,5 +1,9 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+
+        <title>Home | &lt;magicmathman1&gt;</title>
+
         <style>
             @font-face {
                 font-family: Exo2;
@@ -44,7 +48,10 @@
             }
 
             .NavHead > * {
+                cursor: pointer;
                 margin: 0 10px;
+
+                position: relative;
             }
 
             .NavButtons {
@@ -59,7 +66,35 @@
             }
 
             .NavButtons > * {
+                cursor: pointer;
                 margin: 0 10px;
+
+                position: relative;
+            }
+
+            .NavBarAnim > *::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: #15ff00;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width 0.3s ease, left 0.3s ease;
+            }
+
+            .NavBarAnim > *:hover::before {
+                width: 100%;
+                left: 50%;
+            }
+
+            .NavBar a:link, a:visited {
+                background-color: transparent;
+                color: white;
+                padding: 0;
+                text-align: center;
+                text-decoration: none;
             }
 
             .Footer {
@@ -76,7 +111,7 @@
 
             ._navtext > * {
                 font-family: 'Exo2';
-                color: rgb(255, 255, 255);
+                color: white;
                 font-size: 2em;
                 font-weight: bold;
             }
@@ -92,10 +127,10 @@
     </head>
     <body>
         <div class="NavBar _navtext">
-            <div class="NavHead">
-                <a>&lt;magicmathman1&gt;</a>
+            <div class="NavHead NavBarAnim">
+                <a href="/">&lt;magicmathman1&gt;</a>
             </div>
-            <div class="NavButtons">
+            <div class="NavButtons NavBarAnim">
                 <a>TOOLS</a>
                 <a>CONTACT</a>
                 <a>PORTFOLIO</a>
@@ -106,7 +141,7 @@
 
         <div class="Footer">
             <div class="_roboto-slab-font" id="copyright">
-                Copyright © 2025 magicmathman1
+                Copyright © 2025 &lt;magicmathman1&gt;
             </div>
         </div>
     </body>
