@@ -2,8 +2,13 @@
     <head>
         <title>MC Text Formatter</title>
         <style>
+            @font-face {
+                font-family: "mcfont";
+                src: url("/assets/fonts/Minecraft.ttf") format("truetype");
+            }
+
             body {
-                background-color: #f1e3fa;
+                background-color: #dddddd;
             }
 
             .Resizable {
@@ -13,11 +18,11 @@
 
             .Container {
                 border-style: solid;
-                border-width: 5;
+                border-width: 0;
                 border-radius: 20px;
                 padding: 10px;
 
-                background-color: #c2c6ff;
+                background-color: #9e9e9e;
 
                 max-width: 750px;
                 text-align: center;
@@ -34,6 +39,7 @@
                 border-width: 2px;
                 border-style: solid;
                 border-radius: 8px;
+                border-color: black;
 
                 margin: 2;
 
@@ -60,15 +66,15 @@
                 border-radius: 15px;
 
                 max-width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
             }
 
             .Output div {
-                border-style: solid;
-                border-width: 1;
-
                 background-color: #dadada;
-
                 margin: 0 auto;
+
+                font-family: 'mcfont','Roboto', sans-serif;
             }
         </style>
     </head>
@@ -104,7 +110,7 @@
                 </div>
             </div>
 
-            <p>(obfuscated tedxt doesn't work yet :/)</p>
+            <p>(obfuscated text doesn't work yet :/)</p>
 
             <div class="EditorSection">
                 <div class="Editor" style="margin-top: 30px; margin-bottom: 10px;">
